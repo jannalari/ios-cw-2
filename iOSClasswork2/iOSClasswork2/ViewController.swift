@@ -21,6 +21,20 @@ class ViewController: UIViewController {
         
         
         // MARK: - اكتب ال if statement الكود تحت
+        if animal == "cat"{
+            emojiArray.append("🐱")
+        }
+        else if animal == "dog"{
+            emojiArray.append("🐶")
+        }
+        else if animal == "horse"{
+            emojiArray.append("🐴")
+        }
+        
+        
+        else{
+            emojiArray.append("❓")
+        }
         
         
         // MARK: - لا تقم بتغيير هذا السطر⚠️⚠️
@@ -30,7 +44,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func ShowAnimal(_ sender: Any) {
+        @IBAction func ShowAnimal(_ sender: Any) {
         // MARK:  تقوم هذه الدالة بعرض الإيموجيز للحيوانات في الأسفل باستعمال `for in`
         animalEmojiLabel.text = ""
         for label in emojiArray
@@ -38,7 +52,7 @@ class ViewController: UIViewController {
             animalEmojiLabel.text! += label
         }
         /// **BONUS**: 🎁 قم بمسح مكونات المصفوفة بعد عرضها
-
+            emojiArray.removeAll()
     }
 }
 
